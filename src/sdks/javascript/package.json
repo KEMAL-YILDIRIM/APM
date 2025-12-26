@@ -1,0 +1,46 @@
+{
+  "name": "@racelogic/apm-sdk",
+  "version": "1.0.0",
+  "description": "APM SDK for JavaScript/TypeScript applications",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./browser": {
+      "require": "./dist/browser.js",
+      "import": "./dist/browser.mjs",
+      "types": "./dist/browser.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest",
+    "lint": "eslint src --ext .ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "apm",
+    "telemetry",
+    "opentelemetry",
+    "logging",
+    "metrics",
+    "tracing"
+  ],
+  "author": "Racelogic",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
